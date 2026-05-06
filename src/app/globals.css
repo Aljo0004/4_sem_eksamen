@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /*Colors*/
+--primary-color: #ffffff;
+--secondary-color: #0a0a0a;
+--tertiary-color: #454E9E;
+--blue1: #161B47;
+--blue2: #242A64;
+--blue3: #333B81;
+--blue4: #454E9E;
+--blue5: #5963BB;
+--blue6: #707AD8;
+--blue7: #8893F5;
+--blue8: #B0B8FF;
+--blue9: #D1D6FF;
+--blue10: #F3F5FF;
+
+
+
+/*Border*/
+--border-color: #454e9e;
+--border-width-sm: 1px;
+--border-width-md: 2px;
+--border-radius-sm: 4px;  
+--border-radius-md: 8px;
+--border-default: var(--border-width-md) solid var(--border-color);
+
+
+
+/*Spacing*/
+--space-2xs: 0.25rem;  /* 4px  */
+--space-xs: 0.5rem;    /* 8px  */
+--space-sm: 0.75rem;   /* 12px */
+--space-md: 1rem;      /* 16px */
+--space-lg: 1.5rem;    /* 24px */
+--space-xl: 2rem;      /* 32px */
+--space-2xl: 3rem;     /* 48px */
+--space-3xl: 3.5rem;   /* 56px */
+
+
+
+/*Desktop fontsize*/ /*FONTS LIGGER I layout.js*/
+--fontsize-xs-desktop: 0.62rem;   /* 10px */
+--fontsize-sm-desktop: 1rem;      /* 16px */
+--fontsize-base-desktop: 1.5rem;  /* 24px */
+--fontsize-md-desktop: 2.25rem;   /* 36px */
+--fontsize-lg-desktop: 3.37rem;   /* 54px */
+--fontsize-xl-desktop: 5.06rem;   /* 81px */
+--fontsize-2xl-desktop: 7.59rem;  /* 121.5px */
+--fontsize-3xl-desktop: 11.39rem; /* 182.25px */
+
+
+
+/*Mobile fontsize*/
+--fontsize-xs-mobil: 0.75rem;   /* 12px */
+--fontsize-sm-mobil: 0.87rem;   /* 14px */
+--fontsize-base-mobil: 1.12rem; /* 18px */
+--fontsize-md-mobil: 1.37rem;   /* 22px */
+--fontsize-lg-mobil: 1.75rem;   /* 28px */
+--fontsize-xl-mobil: 2.25rem;   /* 36px */
+--fontsize-2xl-mobil: 2.62rem;  /* 42px */
 }
 
+
+
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--primary-color);
+  /* --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-geist-mono); */
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-  }
+  } */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--primary-color);
+
 }
