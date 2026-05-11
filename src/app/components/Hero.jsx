@@ -8,25 +8,29 @@ import { FaFacebook } from "react-icons/fa";
 const Hero = () => {
     return (
       <section className="">
-        <div>
-          <h1 className="uppercase leading-28 ">kæntt - kunst der skiller sig ud</h1>
-          <h6 className="tracking-wider font-light">
-            Opdag unika værker fra nøje udvalgte kunstnere - <br /> og oplev dem helt tæt på i galleriet
-          </h6>
-          <Link href="/productlist" className="--border-width-sm mt-8 inline-block  bg-[var(--secondary-blue)] px-6 py-3 text-sm uppercase text-[var(--primary-color)] transition-colors duration-300 ease-out hover:scale-105 transition-transform">
-            Udforsk Værker
-          </Link>
+        <div className="flex flex-row">
+          <div>
+            <h1 className="uppercase leading-28 ">kæntt - kunst der skiller sig ud</h1>
+            <h6 className="tracking-wider font-light">
+              Opdag unika værker fra nøje udvalgte kunstnere - <br /> og oplev dem helt tæt på i galleriet
+            </h6>
+            <Link href="/productlist" className="--border-width-sm mt-8 inline-block  bg-[var(--secondary-blue)] px-6 py-3 text-sm uppercase text-[var(--primary-color)] transition-colors duration-300 ease-out hover:scale-105 transition-transform">
+              Udforsk Værker
+            </Link>
+          </div>
+          <div className="place-self-end">
+            <h6 className="tracking-wider text-right font-light">
+              Find os på sociale medier:
+              <div className="flex space-x-4 place-content-end gap-3.5 mt-2">
+                <FaFacebook className="" />
+                <FaInstagram className="" />
+                <FaTiktok className="" />
+              </div>
+            </h6>
+            <div className="bg-(--primary-blue) h-3 w-36 ml-24 mt-6"></div>
+          </div>
         </div>
-        <div>
-          <h6 className="tracking-wider font-light">
-            Find os på sociale medier:
-            <div className="flex space-x-4 mt-2">
-              <FaFacebook className="" />
-              <FaInstagram className="" />
-              <FaTiktok className="" />
-            </div>
-          </h6>
-        </div>
+        <img src="/Images/Events_Hero_img.jpg" alt="Hero Image" className="mt-8 w-full p-0"/>
       </section>
     );
 }
