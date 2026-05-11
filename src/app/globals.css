@@ -66,6 +66,8 @@
 body {
   font-family: var(--font-body);
   font-size: var(--fontsize-p-desktop);
+padding-left: 50px;
+padding-right: 50px;
 }
 
 h1, h2, h3, h4, h5 {
