@@ -4,12 +4,12 @@ import { FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer sm:footer-horizontal text-base-content p-10 font-(--font-montserrat) bg-[#B0B8FF]">
+    <footer className="footer sm:footer-horizontal text-base-content p-10 bg-[#B0B8FF]">
       <div className="w-full pb-6 mb-6">
-        <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-2">
+        <div className="max-w-6xl mx-auto flex flex-col items-center lg:items-start md:justify-start gap-2 text-center md:text-left">
           <img src="/images/logo.svg" alt="Logo" className="h-12 object-contain" />
 
-          <div className="flex items-center gap-4 mt-2">
+          <div className="flex items-center gap-4 mt-2 justify-center lg:justify-start">
             <a href="#" aria-label="Facebook" className="hover:text-primary transition">
               <FaFacebook />
             </a>
