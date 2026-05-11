@@ -73,19 +73,31 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
 
 }
+h6 {
+  font-weight: 250;
+}
 
-
+/*Font sizes*/
 h1 { font-size: var(--fontsize-h2-desktop); }
 h2 { font-size: var(--fontsize-h2-desktop); }
 h3 { font-size: var(--fontsize-h3-desktop); }
 h4 { font-size: var(--fontsize-h4-desktop); }
 h5 { font-size: var(--fontsize-h5-desktop); }
 h6 { font-size: var(--fontsize-manchet-mobil); }
-
 small { font-size: var(--fontsize-small-desktop); }
 p { font-size: var(--fontsize-p-desktop); }
 
 
+/* Mobile font sizes */
+@media (max-width: 768px) {
+  h1 { font-size: var(--fontsize-h1-mobil); }
+  h2 { font-size: var(--fontsize-h2-mobil); }
+  h3 { font-size: var(--fontsize-h3-mobil); }
+  h4 { font-size: var(--fontsize-h4-mobil); }
+  h5 { font-size: var(--fontsize-h5-mobil); }
+  p { font-size: var(--fontsize-p-mobil); }
+  small { font-size: var(--fontsize-small-mobil); }
+}
 
 
 @theme inline {
