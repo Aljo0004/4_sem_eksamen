@@ -70,13 +70,19 @@ padding-left: 50px;
 padding-right: 50px;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2 {
   font-family: var(--font-montserrat);
   font-weight: bold;
 
 }
-h6 {
-  font-weight: 250;
+ h3, h4 {
+  font-family: var(--font-montserrat);
+  font-weight: medium;
+
+}
+h5, h6 {
+  font-family: var(--font-montserrat);
+  font-weight: normal;
 }
 
 /*Font sizes*/
