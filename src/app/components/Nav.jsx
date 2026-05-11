@@ -9,10 +9,10 @@ const Nav = () => {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="main-border hidden justify-evenly bg-[var(--primary-color)] p-4 text-[var(--secondary-color)] uppercase sm:flex">
+      <nav className="main-border hidden justify-between bg-[var(--primary-color)] p-4 text-[var(--secondary-color)] uppercase sm:flex">
         <div>
           <Link href="/">
-            <img src="/assets/Logo.png" alt="logo" />
+            <img src="/Images/Logo.svg" alt="logo" className="w-60" />
           </Link>
         </div>
         <ul className="m-4 flex gap-8">
