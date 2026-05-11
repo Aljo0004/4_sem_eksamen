@@ -17,27 +17,27 @@ const Nav = () => {
         </div>
         <ul className="m-4 flex gap-8">
           <li>
-            <Link href="/" className="relative pb-4 font-normal transition-[font-weight] duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--purple)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
+            <Link href="/" className="relative pb-4 font-normal transition-[font-weight] duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--primary-blue)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
               Forside
             </Link>
           </li>
           <li>
-            <Link href="/productlist" className="relative pb-4 font-normal transition-[font-weight] duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--purple)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
+            <Link href="/productlist" className="relative pb-4 font-normal transition-[font-weight] duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--primary-blue)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
               Værker
             </Link>
           </li>
           <li>
-            <Link href="/artists" className="relative pb-4 font-normal transition-[font-weight] duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--purple)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
+            <Link href="/artists" className="relative pb-4 font-normal transition-[font-weight] duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--primary-blue)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
               Kunstnere
             </Link>
           </li>
           <li>
-            <Link href="/about" className="relative pb-4 font-normal transition-[font-weight] duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--purple)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
+            <Link href="/about" className="relative pb-4 font-normal transition-[font-weight] duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--primary-blue)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
               Om Kæntt
             </Link>
           </li>
           <li>
-            <Link href="/events" className="relative pb-4 font-normal transition-[font-weight] duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--purple)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
+            <Link href="/events" className="relative pb-4 font-normal transition-[font-weight] duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--primary-blue)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
               Events
             </Link>
           </li>
