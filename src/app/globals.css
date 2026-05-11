@@ -15,7 +15,7 @@
 --blue8: #B0B8FF;
 --blue9: #D1D6FF;
 --blue10: #F3F5FF;
-
+--purple: #B0B8FF;
 
 
 /*Border*/
@@ -26,7 +26,8 @@
 --border-radius-md: 8px;
 --border-default: var(--border-width-md) solid var(--border-color);
 
-
+  --font-barlow: var(--font-barlow);
+  --font-montserrat: var(--font-montserrat);
 
 /*Spacing*/
 --space-2xs: 0.25rem;  /* 4px  */
