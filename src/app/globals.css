@@ -40,7 +40,6 @@
 --space-3xl: 3.5rem;   /* 56px */
 
 
-
 /*Desktop fontsize*/ /*FONTS LIGGER I layout.js*/
 --fontsize-small-desktop: 0.62rem;   /* 10px */
 --fontsize-p-desktop: 1rem;      /* 16px */
@@ -48,7 +47,7 @@
 --fontsize-h5-desktop: 2.25rem;   /* 36px */
 --fontsize-h4-desktop: 3.37rem;   /* 54px */
 --fontsize-h3-desktop: 5.06rem;   /* 81px */
---fontsize-h2-desktop: 7.59rem;  /* 121.5px */
+--fontsize-h2-desktop: 6rem;  /* 96px */
 --fontsize-h1-desktop: 11.39rem; /* 182.25px */
 
 
@@ -63,6 +62,29 @@
 --fontsize-h2-mobil: 2.25rem;   /* 36px */
 --fontsize-h1-mobil: 2.62rem;  /* 42px */
 }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fontsize-p-desktop);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-montserrat);
+  font-weight: bold;
+
+}
+
+
+h1 { font-size: var(--fontsize-h2-desktop); }
+h2 { font-size: var(--fontsize-h2-desktop); }
+h3 { font-size: var(--fontsize-h3-desktop); }
+h4 { font-size: var(--fontsize-h4-desktop); }
+h5 { font-size: var(--fontsize-h5-desktop); }
+h6 { font-size: var(--fontsize-manchet-mobil); }
+
+small { font-size: var(--fontsize-small-desktop); }
+p { font-size: var(--fontsize-p-desktop); }
+
 
 
 

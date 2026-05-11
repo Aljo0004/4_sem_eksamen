@@ -1,5 +1,7 @@
 const Headline = () => {
-  return <div></div>;
+  return <div>
+    
+  </div>;
 };
 
 export default Headline;
