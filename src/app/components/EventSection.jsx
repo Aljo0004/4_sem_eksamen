@@ -1,5 +1,10 @@
+import EventCard from "./EventCard";
+
 const EventSection = () => {
-  return <div></div>;
+  return <div>
+<EventCard />
+
+  </div>;
 };
 
 export default EventSection;

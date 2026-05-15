@@ -156,3 +156,27 @@ p {
 body {
   background: var(--primary-color);
 }
+
+/* Scoped scrollbar styling for the horizontal event card rail */
+.event-scrollbar {
+  scrollbar-color: var(--primary-blue);
+}
+
+.event-scrollbar::-webkit-scrollbar {
+  height: 15px;
+}
+
+.event-scrollbar::-webkit-scrollbar-track {
+  background: var(--primary-color);
+  border-radius: 2px;
+  border: 1px solid var(--primary-blue);
+}
+
+.event-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 0px;
+}
+
+.event-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-blue);
+}
