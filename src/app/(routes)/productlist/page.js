@@ -10,10 +10,10 @@ export default function Home() {
     <main>
       <Nav />
       <Hero />
-      <ProductSection />
+      <ProductSection category="painting" title="Plakater"/>
       <InfoCard />
-      <ProductSection />
-      <ProductSection />
+      <ProductSection category="keramik" title="Keramik"/>
+      <ProductSection category="glas" title="Glasværker"/>
       <Footer />
     </main>
   );

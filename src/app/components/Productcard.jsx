@@ -1,7 +1,7 @@
 "use client";
 const Productcard = ({ artwork }) => {
   return (
-    <article className="w-full max-w-xs overflow-hidden bg-white">
+    <article className="w-full max-w-xs overflow-hidden mb-12 bg-white">
       <div className="aspect-squared w-full">
         <img src={artwork?.thumbnail_url} alt={artwork?.name || "Artwork"} className="h-full mb-4 w-full object-cover" />
       </div>

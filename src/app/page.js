@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <EventSection />
       <Location />
-      <ProductSection />
+      <ProductSection category="keramik" title="Håndplukkede produkter" limit={4}/>
       <LearnMore />
       <InfoCard />
       <Footer />

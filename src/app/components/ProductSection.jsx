@@ -5,7 +5,7 @@ import Productcard from "./Productcard";
 const url = "https://nrmpgakohbffwagdkvpz.supabase.co/rest/v1/";
 const key = "sb_publishable_5CdrCx6J36n2qJrs6sBwiA_bvTRTQ4a";
 
-const ProductSection = () => {
+const ProductSection = ({ category = "glas", title = "Glasværker", limit = 20 }) => {
   const [artworks, setArtworks] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
@@ -13,7 +13,7 @@ const ProductSection = () => {
   useEffect(() => {
     const fetchArtworks = async () => {
       try {
-        const response = await fetch(`${url}artworks?select=id,thumbnail_url,name,price,description&category=eq.keramik&order=id.desc&limit=4`, {
+        const response = await fetch(`${url}artworks?select=id,thumbnail_url,name,price,description&category=eq.${category}&order=id.desc&limit=${limit}`, {
           headers: {
             apikey: key,
             Authorization: `Bearer ${key}`,
@@ -41,14 +41,14 @@ const ProductSection = () => {
     };
 
     fetchArtworks();
-  }, []);
+  }, [category, limit]);
 
   if (loading) return <p>Henter artworks...</p>;
   if (error) return <p>Fejl: {error}</p>;
 
   return (
     <div className="">
-      <h4 className="mb-8">Håndplukkede produkter</h4>
+      <h4 className="mb-6 mt-6">{title}</h4>
       <div className="flex flex-wrap gap-4">
         {artworks.map((artwork) => (
           <Productcard key={artwork.id} artwork={artwork} />
@@ -56,7 +56,6 @@ const ProductSection = () => {
       </div>
     </div>
   );
-  
 };
 
 export default ProductSection;
