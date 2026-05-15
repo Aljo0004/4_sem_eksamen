@@ -5,16 +5,17 @@ import LearnMoreSection from "../../components/LearnMoreSection";
 import Vision from "../../components/Vision";
 import Location from "../../components/Location";
 import Footer from "../../components/Footer";
+import Kvalitet from "../../components/Kvalitet";
 
 export default function Home() {
   return (
     <main>
       <Nav />
-<Hero />
-<LearnMoreSection />
-<Vision />
-<Location />
-<LearnMoreSection />
+      <Hero />
+      <LearnMoreSection />
+      <Vision />
+      <Location />
+      <Kvalitet />
       <Footer />
     </main>
   );
