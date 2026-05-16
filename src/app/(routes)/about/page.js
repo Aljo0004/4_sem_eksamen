@@ -9,14 +9,16 @@ import Kvalitet from "../../components/Kvalitet";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Nav />
       <Hero />
+      <main className="page">
       <LearnMoreSection />
       <Vision />
       <Location />
       <Kvalitet />
       <Footer />
     </main>
+    </>
   );
 }

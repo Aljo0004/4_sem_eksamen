@@ -7,12 +7,14 @@ import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Nav />
-<Hero />
-<EventInfo />
-<CampaignSection />
+      <main className="page">
+        <Hero />
+        <EventInfo />
+        <CampaignSection />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
