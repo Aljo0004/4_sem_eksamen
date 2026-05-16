@@ -10,10 +10,6 @@ export default function Home() {
       <Nav />
       <Hero />
       <ArtistSection />
-      <ArtistSection />
-      <ArtistSection />
-      <ArtistSection />
-      <ArtistSection />
       <Footer />
     </main>
   );
