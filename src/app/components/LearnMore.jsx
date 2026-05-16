@@ -10,8 +10,8 @@ const LearnMore = () => {
             <div className="bg-(--primary-blue) h-2 w-26 mb-2"></div>
             <p className="t-card">Kunstnere</p>
           </div>
-          <h3 className="t-h3">Lær mere om kunstnerne bag værkerne</h3>
-          <p className="t-p mt-2 max-w-[26ch] lg:mb-5">Få mere information om de aktuelle kunstnere bag de værker du finder hos Kæntt.</p>
+          <h2 className="t-h2">Lær mere om kunstnerne bag værkerne</h2>
+          <p className="t-p mt-2 lg:mb-5">Få mere information om de aktuelle kunstnere bag de værker du finder hos Kæntt.</p>
           <a href="#" className="mt-3 inline-block underline hover:text-primary text-(--secondary-blue)">
             Læs mere
           </a>

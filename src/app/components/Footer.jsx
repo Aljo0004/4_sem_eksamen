@@ -27,47 +27,47 @@ const Footer = () => {
 
       <div className="w-full flex flex-col md:flex-row md:gap-8 gap-6">
         <nav className="flex-1">
-          <h5>Adresse -</h5>
-          <p>St. Kongensgade 3, 1264 København K</p>
+          <h6 className="t-h6">Adresse -</h6>
+          <p className="t-p">St. Kongensgade 3, 1264 København K</p>
         </nav>
 
         <nav className="flex-1">
-          <h5>Åbningstider - </h5>
-          <p>
+          <h5 className="t-h5">Åbningstider - </h5>
+          <p className="t-p">
             Man-fre: 08:00 - 16:00 <br></br>Lørdag & søndag: 12:00 - 15:00
           </p>
         </nav>
 
         <nav className="flex-1">
-          <h5>Nyhedsbrev -</h5>
-          <p>
+          <h5 className="t-h5">Nyhedsbrev -</h5>
+          <p className="t-p">
             Nyhedsbrevet er til dig, der gerne vil holde sig opdateret om Dansk kvindesamfunds events og nyheder. <br></br>
             <br></br> <b>Du kan til enhver tid framelde dig igen!</b>
           </p>
           <div className=" space-y-3">
             <fieldset className="fieldset w-full px-3 py-2 bg-white">
-              <p>Fuldt navn</p>
+              <p className="t-p">Fuldt navn</p>
               <input type="text" className="input input-sm w-full" placeholder="skriv her" />
             </fieldset>
             <fieldset className="fieldset w-full px-3 py-2 bg-white">
-              <p>E-mail</p>
+              <p className="t-p">E-mail</p>
               <input type="text" className="input input-sm w-full" placeholder="Skriv her" />
             </fieldset>
           </div>
         </nav>
 
         <nav className="flex-1 flex flex-col gap-1">
-          <h5>Godt at vide</h5>
-          <a className="link link-hover text-[14px] underline">Handelsbetingelser</a>
-          <a className="link link-hover text-[14px] underline">Cookie Informationer</a>
-          <a className="link link-hover text-[14px] underline">Persondatapolitik</a>
+          <h5 className="t-h5">Godt at vide</h5>
+          <a className="link link-hover t-p underline">Handelsbetingelser</a>
+          <a className="link link-hover t-p underline">Cookie Informationer</a>
+          <a className="link link-hover t-p underline">Persondatapolitik</a>
         </nav>
 
         <nav className="flex-1 flex flex-col gap-1">
-          <h5>Kontakt os</h5>
-          <a className="link link-hover text-[14px] underline">Adresse</a>
-          <a className="link link-hover text-[14px] underline">Mail</a>
-          <a className="link link-hover text-[14px] underline">Galleri ansvarlig</a>
+          <h5 className="t-h5">Kontakt os</h5>
+          <a className="link link-hover t-p underline">Adresse</a>
+          <a className="link link-hover t-p underline">Mail</a>
+          <a className="link link-hover t-p underline">Galleri ansvarlig</a>
         </nav>
       </div>
     </footer>
