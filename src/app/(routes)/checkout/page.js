@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <main>
       <Nav />
-<CheckoutSection />
-<CampaignSection />
+      <CheckoutSection />
+      <CampaignSection />
       <Footer />
     </main>
   );
