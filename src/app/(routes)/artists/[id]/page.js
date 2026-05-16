@@ -1,16 +1,20 @@
 import Image from "next/image";
-import Nav from "../../components/Nav";
-import ArtistInfo from "../../components/ArtistInfo";
-import ProductSection from "../../components/ProductSection";
-import Footer from "../../components/Footer";
+import Nav from "../../../components/Nav";
+import ProductSection from "../../../components/ProductSection";
+import Footer from "../../../components/Footer";
+import ArtistPage from "@/app/components/ArtistPage";
 
-export default function Home() {
+export default async function Home({ params }) {
+  const { id } = await params;
+
   return (
-    <main>
+    <>
       <Nav />
-<ArtistInfo />
-<ProductSection />
-      <Footer />
-    </main>
+      <main className="page">
+        <ArtistPage id={id} />
+        <ProductSection artistId={id} limit={8} title="Kunstnerens produkter" />
+        <Footer />
+      </main>
+    </>
   );
 }
