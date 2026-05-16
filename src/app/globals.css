@@ -1,6 +1,24 @@
 @import "tailwindcss";
 
+/* ===== PAGE SPACING (FIGMA GRID) ===== */
+
+.page {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+
+  padding-inline: 20px;
+}
+
+@media (min-width: 1024px) {
+  .page {
+    padding-inline: 50px;
+  }
+}
+
 :root {
+  --color-background: var(--primary-color);
+
   /*Colors*/
   --primary-color: #ffffff;
   --secondary-color: #0a0a0a;
@@ -23,10 +41,6 @@
   --border-radius-md: 8px;
   --border-default: var(--border-width-md) solid var(--border-color);
 
-  /*Fonts*/
-  --font-barlow: var(--font-barlow);
-  --font-montserrat: var(--font-montserrat);
-
   /*Spacing*/
   --space-2xs: 0.25rem; /* 4px  */
   --space-xs: 0.5rem; /* 8px  */
@@ -37,113 +51,128 @@
   --space-2xl: 3rem; /* 48px */
   --space-3xl: 3.5rem; /* 56px */
 
-  /*Desktop fontsize*/ /*FONTS LIGGER I layout.js*/
-  --fontsize-small-desktop: 0.62rem; /* 10px */
-  --fontsize-p-desktop: 1rem; /* 16px */
-  --fontsize-h6-desktop: 1.5rem; /* 24px */
-  --fontsize-h5-desktop: 2.25rem; /* 36px */
-  --fontsize-h4-desktop: 3.37rem; /* 54px */
-  --fontsize-h3-desktop: 5.06rem; /* 81px */
-  --fontsize-h2-desktop: 6rem; /* 96px */
-  --fontsize-h1-desktop: 11.39rem; /* 182.25px */
+  --font-heading: "Barlow", sans-serif;
+  --font-body: "Montserrat", sans-serif;
 
-  /*Mobile fontsize*/
-  --fontsize-small-mobil: 0.75rem; /* 12px */
-  --fontsize-p-mobil: 0.87rem; /* 14px */
-  --fontsize-h5-mobil: 1.12rem; /* 18px */
-  --fontsize-h4-mobil: 1.37rem; /* 22px */
-  --fontsize-h3-mobil: 1.75rem; /* 28px */
-  --fontsize-manchet-mobil: 1.875rem; /* 30px */
-  --fontsize-h2-mobil: 2.25rem; /* 36px */
-  --fontsize-h1-mobil: 2.62rem; /* 42px */
+  /* =========================
+     DESKTOP TYPE SCALE
+  ========================== */
+
+  --h1-d: 121.5px;
+  --h2-d: 81px;
+  --h3-d: 54px;
+  --h4-d: 36px;
+  --h5-d: 24px;
+
+  --p-d: 16px;
+  --small-d: 10.67px;
+
+  /* =========================
+     MOBILE TYPE SCALE
+  ========================== */
+
+  --h1-m: 42px;
+  --h2-m: 36px;
+  --h3-m: 28px;
+  --h4-m: 22px;
+  --h5-m: 18px;
+
+  --p-m: 14px;
+  --small-m: 12px;
+
+  --manchet-m: 30px;
 }
 
-body {
+/* =========================
+   TYPOGRAPHY CLASSES
+========================= */
+
+/* HEADINGS (Barlow) */
+.t-h1,
+.t-h2,
+.t-h3,
+.t-h4,
+.t-h5,
+.t-h6 {
+  font-family: var(--font-heading);
+  line-height: 1.1;
+}
+
+/* Desktop sizes */
+
+.t-h1 {
+  font-size: var(--h2-d);
+  font-weight: 700;
+}
+.t-h2 {
+  font-size: var(--h3-d);
+  font-weight: 500;
+}
+.t-h3 {
+  font-size: var(--h4-d);
+  font-weight: 500;
+}
+.t-h4 {
+  font-size: var(--h5-d);
+  font-weight: 400;
+}
+.t-h5 {
+  font-size: var(--h6-d);
+  font-weight: 400;
+}
+
+/* BODY (Montserrat) */
+.t-p,
+.t-small,
+.t-card,
+.t-manchet {
   font-family: var(--font-body);
-  font-size: var(--fontsize-p-desktop);
-  padding-left: 50px;
-  padding-right: 50px;
+  line-height: 1.4;
 }
 
-h1,
-h2 {
-  font-family: var(--font-montserrat);
-  font-weight: bold;
+.t-p {
+  font-size: var(--p-d);
+  font-weight: 400;
 }
-h3,
-h4 {
-  font-family: var(--font-montserrat);
-  font-weight: medium;
-}
-h5,
-h6 {
-  font-family: var(--font-montserrat);
-  font-weight: normal;
+.t-small {
+  font-size: var(--small-d);
+  font-weight: 400;
 }
 
-/*Font sizes*/
-h1 {
-  font-size: var(--fontsize-h2-desktop);
-}
-h2 {
-  font-size: var(--fontsize-h2-desktop);
-}
-h3 {
-  font-size: var(--fontsize-h3-desktop);
-}
-h4 {
-  font-size: var(--fontsize-h4-desktop);
-}
-h5 {
-  font-size: var(--fontsize-h5-desktop);
-}
-h6 {
-  font-size: var(--fontsize-manchet-mobil);
-}
-small {
-  font-size: var(--fontsize-small-desktop);
-}
-p {
-  font-size: var(--fontsize-p-desktop);
+.t-card {
+  font-size: var(--p-d);
+  font-weight: 600;
 }
 
-/* Mobile font sizes */
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
-  h1 {
-    font-size: var(--fontsize-h1-mobil);
-    font-weight: bold;
+  .t-h1 {
+    font-size: var(--h2-m);
   }
-  h2 {
-    font-size: var(--fontsize-h2-mobil);
-    font-weight: bold;
+  .t-h2 {
+    font-size: var(--h3-m);
   }
-  h3 {
-    font-size: var(--fontsize-h3-mobil);
-    font-weight: medium;
+  .t-h3 {
+    font-size: var(--h4-m);
   }
-  h4 {
-    font-size: var(--fontsize-h4-mobil);
-    font-weight: medium;
+  .t-h4 {
+    font-size: var(--h5-m);
   }
-  h5 {
-    font-size: var(--fontsize-h5-mobil);
-    font-weight: normal;
-  }
-  p {
-    font-size: var(--fontsize-p-mobil);
-    font-weight: normal;
-  }
-  small {
-    font-size: var(--fontsize-small-mobil);
-    font-weight: normal;
-  }
-}
 
-@theme inline {
-  --color-background: var(--primary-color);
-  /* --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono); */
+  .t-p {
+    font-size: var(--p-m);
+  }
+  .t-small {
+    font-size: var(--small-m);
+  }
+
+  .t-manchet {
+    font-size: var(--manchet-m);
+    font-weight: 400;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
