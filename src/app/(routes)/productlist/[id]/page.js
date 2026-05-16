@@ -9,12 +9,14 @@ export default async function Home({ params }) {
   const { id } = await params;
 
   return (
-    <main>
+    <>
       <Nav />
-      <ProductInfo id={id} />
-      <ProductSection category="keramik" title="Relaterede produkter" limit={4} />
-      <InfoCard />
+      <main className="page">
+        <ProductInfo id={id} />
+        <ProductSection category="keramik" title="Relaterede produkter" limit={4} />
+        <InfoCard />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
