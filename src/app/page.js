@@ -10,15 +10,17 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Nav />
       <Hero />
-      <EventSection />
-      <Location />
-      <ProductSection category="keramik" title="Håndplukkede produkter" limit={4}/>
-      <LearnMore />
-      <InfoCard />
+      <main className="page">
+        <EventSection />
+        <Location />
+        <ProductSection category="keramik" title="Håndplukkede produkter" limit={4} />
+        <LearnMore />
+        <InfoCard />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

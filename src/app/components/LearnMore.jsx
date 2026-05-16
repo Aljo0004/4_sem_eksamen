@@ -8,10 +8,10 @@ const LearnMore = () => {
         <div className="order-1 md:order-2">
           <div className="mb-3">
             <div className="bg-(--primary-blue) h-2 w-26 mb-2"></div>
-            <p className="">Kunstnere</p>
+            <p className="t-card">Kunstnere</p>
           </div>
-          <h3 className="lg:!text-6xl lg:mb-5">Lær mere om kunstnerne bag værkerne</h3>
-          <h5 className="mt-2 lg:!text-2xl max-w-[26ch] lg:mb-5">Få mere information om de aktuelle kunstnere bag de værker du finder hos Kæntt.</h5>
+          <h3 className="t-h3">Lær mere om kunstnerne bag værkerne</h3>
+          <p className="t-p mt-2 max-w-[26ch] lg:mb-5">Få mere information om de aktuelle kunstnere bag de værker du finder hos Kæntt.</p>
           <a href="#" className="mt-3 inline-block underline hover:text-primary text-(--secondary-blue)">
             Læs mere
           </a>
