@@ -17,7 +17,7 @@ const ProductSection = ({ category = "glas", title = "Glasvaerker", limit = 20, 
         setError("");
 
         const filter = artistId ? `artist_id=eq.${artistId}` : `category=eq.${category}`;
-        const response = await fetch(`${url}artworks?select=id,thumbnail_url,name,price,description&${filter}&order=id.desc&limit=${limit}`, {
+        const response = await fetch(`${url}artworks?select=id,artist_id,thumbnail_url,name,price,description,artists(name)&${filter}&order=id.desc&limit=${limit}`, {
           headers: {
             apikey: key,
             Authorization: `Bearer ${key}`,
@@ -52,7 +52,7 @@ const ProductSection = ({ category = "glas", title = "Glasvaerker", limit = 20, 
 
   return (
     <div className="">
-      {!hideTitle && <h4 className="">{title}</h4>}
+      {!hideTitle && <h4 className="t-h2">{title}</h4>}
 
       {horizontal ? (
         <div className="overflow-x-auto pb-2">

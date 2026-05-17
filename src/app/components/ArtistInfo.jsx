@@ -7,11 +7,11 @@ const ArtistInfo = ({ artists }) => {
       <article className="">
         <Link href={`/artists/${artists.id}`} className="block ">
           <img src={artists?.image_url} alt={artists?.name || "Artwork"} className="w-full h-full aspect-3/2 object-cover transition-transform duration-300 ease-out hover:scale-95" />
-          <div className="place-content-end">
+          <div className="">
             <div className="bg-(--primary-blue) max-w-sm h-2 w-28 mt-4 mb-4"></div>
             <div className="flex flex-col justify-between">
-              <p className="text-xl capitalize font-bold leading-tight">{artists?.name}</p>
-              <p className="font-semibold max-w-md">{artists?.description?.substring(0, 100)}...</p>
+              <p className="t-h2">{artists?.name}</p>
+              {/* <p className="t-p max-w-md">{artists?.description?.substring(0, 100)}...</p> */}
             </div>
           </div>
         </Link>
