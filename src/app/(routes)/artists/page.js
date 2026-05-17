@@ -6,11 +6,13 @@ import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Nav />
       <Hero />
-      <ArtistSection />
-      <Footer />
-    </main>
+      <main className="page">
+        <ArtistSection name="Kunstnere hos KÆNTT"/>
+        <Footer />
+      </main>
+    </>
   );
 }

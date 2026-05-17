@@ -5,7 +5,7 @@ import Productcard from "./Productcard";
 const url = "https://nrmpgakohbffwagdkvpz.supabase.co/rest/v1/";
 const key = "sb_publishable_5CdrCx6J36n2qJrs6sBwiA_bvTRTQ4a";
 
-const ProductSection = ({ category = "glas", title = "Glasvaerker", limit = 20, artistId = null }) => {
+const ProductSection = ({ category = "glas", title = "Glasvaerker", limit = 20, artistId = null, horizontal = false, hideTitle = false }) => {
   const [artworks, setArtworks] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
@@ -52,12 +52,25 @@ const ProductSection = ({ category = "glas", title = "Glasvaerker", limit = 20, 
 
   return (
     <div className="">
-      <h4 className="mb-6 mt-6">{title}</h4>
-      <div className="flex flex-wrap gap-4">
-        {artworks.map((artwork) => (
-          <Productcard key={artwork.id} artwork={artwork} />
-        ))}
-      </div>
+      {!hideTitle && <h4 className="">{title}</h4>}
+
+      {horizontal ? (
+        <div className="overflow-x-auto pb-2">
+          <div className="flex gap-4">
+            {artworks.map((artwork) => (
+              <div key={artwork.id} className="min-w-[calc(50%-0.5rem)] shrink-0 basis-[calc(50%-0.5rem)]">
+                <Productcard artwork={artwork} pinDetailsToBottom />
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="flex flex-wrap gap-4">
+          {artworks.map((artwork) => (
+            <Productcard key={artwork.id} artwork={artwork} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import ArtistInfo from "./ArtistInfo";
+import ProductSection from "./ProductSection";
 
 const url = "https://nrmpgakohbffwagdkvpz.supabase.co/rest/v1/";
 const key = "sb_publishable_5CdrCx6J36n2qJrs6sBwiA_bvTRTQ4a";
@@ -48,10 +49,13 @@ const ArtistSection = ({ name = "glas", limit = 20 }) => {
 
   return (
     <div className="">
-      <h2 className="mb-6 mt-6">{name}</h2>
+      <h2 className="mb-6 pt-6">{name}</h2>
       <div className="flex flex-col gap-4">
         {artworks.map((artists) => (
-          <ArtistInfo key={artists.id} artists={artists} />
+          <section key={artists.id} className="mb-12 flex gap-8 items-start border-b border-black">
+            <ArtistInfo artists={artists} />
+            <ProductSection artistId={artists.id} limit={4} title="" horizontal />
+          </section>
         ))}
       </div>
     </div>
@@ -59,4 +63,3 @@ const ArtistSection = ({ name = "glas", limit = 20 }) => {
 };
 
 export default ArtistSection;
-
