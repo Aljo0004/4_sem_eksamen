@@ -49,7 +49,7 @@ const ArtistSection = ({ name = "glas", limit = 20 }) => {
 
   return (
     <div className="">
-      <h2 className="mb-6 pt-6">{name}</h2>
+      <h2 className="mb-6 t-h2 pt-6">{name}</h2>
       <div className="flex flex-col gap-4">
         {artworks.map((artists) => (
           <section key={artists.id} className="mb-12 flex gap-8 items-start border-b border-black">

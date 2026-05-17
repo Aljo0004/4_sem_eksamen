@@ -139,6 +139,8 @@
   font-weight: 600;
 }
 
+
+
 /* =========================
    MOBILE
 ========================= */
@@ -164,10 +166,6 @@
     font-size: var(--small-m);
   }
 
-  .t-manchet {
-    font-size: var(--manchet-m);
-    font-weight: 400;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
