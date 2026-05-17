@@ -13,12 +13,12 @@ export default function Home() {
       <Nav />
       <Hero />
       <main className="page">
-      <LearnMoreSection />
-      <Vision />
-      <Location />
-      <Kvalitet />
+        <LearnMoreSection />
+        <Vision />
+        <Location />
+        <Kvalitet />
+      </main>
       <Footer />
-    </main>
     </>
   );
 }
