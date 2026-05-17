@@ -5,7 +5,7 @@ const LearnMoreSection = () => {
         {/* Text column: stays above image on mobile, left on desktop */}
         <div className="order-2 w-full lg:w-480px lg:order-1">
           <div className="">
-            <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-5"></div>
+            <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-5 lg:mt-0"></div>
             <h2 className="t-h2 pb-5">Hvem er KÆNTT</h2>
             <p className="t-p lg:pr-45">
               KÆNTT er et kurateret kunstgalleri i København, skabt som et nyt projekt fra Kræss på Nørrebro. Vi arbejder med unika værker i form af plakater og keramik, udvalgt med fokus på æstetik, kvalitet og en stærk visuel identitet.
@@ -29,7 +29,7 @@ const LearnMoreSection = () => {
         {/* Text column: stays above image on mobile, left on desktop */}
         <div className="order-2 w-full lg:w-480px lg:order-2">
           <div className="">
-            <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-5"></div>
+            <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-5 lg:mt-0"></div>
             <h2 className="t-h2 pb-5">Hvad er vores vision?</h2>
             <p className="t-p lg:pr-45">
               KÆNTT er skabt med en vision om at bringe unika kunst tættere på en ny generation af kunstkøbere i København. Som et high-end galleri og et nyt projekt fra Kræss på Nørrebro, er ambitionen at skabe et kurateret univers, hvor kvalitet, æstetik og personlighed går hånd i hånd.<br></br>
