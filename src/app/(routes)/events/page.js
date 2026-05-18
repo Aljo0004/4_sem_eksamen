@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Nav />
+      <Hero />
       <main className="page">
-        <Hero />
         <EventInfo />
         <CampaignSection />
       </main>
