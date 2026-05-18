@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Nav from "../../components/Nav";
 import CheckoutSection from "../../components/CheckoutSection";
 import CampaignSection from "../../components/CampaignSection";

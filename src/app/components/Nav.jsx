@@ -3,9 +3,11 @@ import { useState } from "react";
 import { RiShoppingBasket2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
 import Link from "next/link";
+import useStore from "./favorit";
 
 const Nav = () => {
   const [navActive, setNavActive] = useState(false);
+  const { openCart } = useStore();
   return (
     <>
       {/* Desktop Navigation */}
@@ -42,7 +44,9 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            <RiShoppingBasket2Line size={40} className="relative pb-4" />
+            <button type="button" onClick={openCart} aria-label="Open cart" className="relative cursor-pointer duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-0 after:bg-[var(--primary-blue)] after:transition-[width] after:duration-300 after:ease-out hover:font-bold hover:after:w-full">
+              <RiShoppingBasket2Line size={40} className="relative pb-4" />
+            </button>
           </li>
         </ul>
       </nav>
@@ -57,7 +61,6 @@ const Nav = () => {
         <button id="burger" onClick={() => setNavActive(!navActive)} className="z-50 flex cursor-pointer flex-col gap-1.5">
           <div className="h-0.5 w-6 border border-black"></div>
           <div className="h-0.5 w-6 border border-black"></div>
-
           <div className="h-0.5 w-6 border border-black"></div>
         </button>
       </nav>
