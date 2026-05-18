@@ -1,11 +1,18 @@
 "use client";
 
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Kurv from "./Kurv";
 import useStore from "./favorit";
 import { PiXThin } from "react-icons/pi";
 
 const Popover = () => {
   const { isCartOpen, closeCart } = useStore();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    closeCart();
+  }, [pathname, closeCart]);
 
   if (!isCartOpen) {
     return null;
