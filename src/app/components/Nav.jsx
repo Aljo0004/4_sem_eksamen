@@ -11,7 +11,7 @@ const Nav = () => {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="main-border hidden justify-between bg-[var(--primary-color)] p-4 text-[var(--secondary-color)] uppercase sm:flex">
+      <nav className="main-border hidden  justify-between bg-[var(--primary-color)] p-4 text-[var(--secondary-color)] uppercase sm:flex">
         <div>
           <Link href="/">
             <img src="/Images/Logo.svg" alt="logo" className="w-60" />
@@ -54,7 +54,7 @@ const Nav = () => {
       {/* Mobile Navigation */}
       <nav className="main-border flex items-center justify-between bg-background p-4 text-black uppercase sm:hidden">
         <Link href="/">
-          <img src="Images/LogoSmall.svg" alt="logo" width={50} height={20} />
+          <img src="/Images/LogoSmall.svg" alt="logo" width={50} height={20} />
         </Link>
 
         {/* Burger Button */}
