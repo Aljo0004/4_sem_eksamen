@@ -183,7 +183,7 @@ overflow-x: hidden;
   } */
 }
 
-body {
+html, body {
   background: var(--primary-color);
   overflow-x: hidden;
 }

@@ -7,7 +7,7 @@ import { FaFacebook } from "react-icons/fa";
 
 const Hero = () => {
     return (
-      <section className="pb-8">
+      <section className="pb-8 overflow-hidden">
         <div className="flex flex-row ml-[50px] mr-[50px] max-sm:ml-[15px] max-sm:mr-[15px] max-sm:flex-col">
           <div>
             <h1 className="t-h1 uppercase max-w-[75%] max-sm:max-w-4/6">kæntt - kunst der skiller sig ud</h1>
