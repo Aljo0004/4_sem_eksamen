@@ -57,11 +57,11 @@ const ArtistPage = ({ id }) => {
 
       <div className="w-full">
         <div className="bg-(--primary-blue) h-2 w-28 mt-4 mb-4"></div>
-        <p className="pb-4">Kunstner</p>
-        <h1 className="mb-6">{artists.name}</h1>
-        <div className="flex gap-4 pb-6">
-          <FaTiktok size={50} />
-          <FaInstagram size={50} />
+        <p className="pb-4 t-p">Kunstner</p>
+        <h1 className="mb-6 t-h2">{artists.name}</h1>
+        <div className="flex gap-12 pb-6">
+          <FaTiktok size={40} className="cursor-pointer hover:scale-110 transition-transform" />
+          <FaInstagram size={40} className="cursor-pointer hover:scale-110 transition-transform" />
         </div>
         <div>
           <p className="mb-4">{artists.description}</p>

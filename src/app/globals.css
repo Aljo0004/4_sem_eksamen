@@ -138,6 +138,10 @@
   font-size: var(--p-d);
   font-weight: 600;
 }
+.t-manchet {
+  font-size: var(--manchet-m);
+  font-weight: 400;
+}
 
 
 
