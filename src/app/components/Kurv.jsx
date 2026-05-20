@@ -11,7 +11,7 @@ const Kurv = ({ isPage = false }) => {
   const { favorite, toggleFavorite } = useStore();
 
   const totalPrice = favorite.reduce((sum, item) => sum + item.price, 0);
-  const sectionClassName = isPage ? "mt-8 mb-8 rounded-none bg-(--primary-color) p-6" : "h-screen mt-8 rounded-none mb-8 bg-(--primary-color) p-6";
+  const sectionClassName = isPage ? "mt-8 mb-8 rounded-none bg-(--primary-color)" : "h-screen mt-8 rounded-none mb-8 bg-(--primary-color) p-6";
 
   return (
     <section className={sectionClassName}>
@@ -26,7 +26,7 @@ const Kurv = ({ isPage = false }) => {
                 <div className="flex items-center gap-3">
                   <img src={item.thumbnail} alt={item.title} className="h-14 w-14 object-cover" />
                   <div className="flex flex-col">
-                    <p className="font-semibold capitalize">{item.title}</p>
+                    <p className="t-p capitalize">{item.title}</p>
                     <p className="text-sm">{item.price} kr.</p>
                   </div>
                 </div>

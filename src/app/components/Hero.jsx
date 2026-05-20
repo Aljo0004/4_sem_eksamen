@@ -11,9 +11,9 @@ const Hero = () => {
         <div className="flex flex-row ml-[50px] mr-[50px]">
           <div>
             <h1 className="t-h1 uppercase max-w-[75%] ">kæntt - kunst der skiller sig ud</h1>
-            <h6 className="t-manchet">
+            <p className="t-manchet">
               Opdag unika værker fra nøje udvalgte kunstnere - <br /> og oplev dem helt tæt på i galleriet
-            </h6>
+            </p>
             <Link href="/productlist" className="--border-width-sm mt-8 inline-block  bg-[var(--secondary-blue)] px-6 py-3 text-sm uppercase text-[var(--primary-color)] transition-colors duration-300 ease-out hover:scale-105 transition-transform">
               Udforsk Værker
             </Link>
