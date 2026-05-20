@@ -51,21 +51,21 @@ const ProductSection = ({ category = "glas", title = "Glasvaerker", limit = 20, 
   if (error) return <p>Fejl: {error}</p>;
 
   return (
-    <div className="">
+    <div className="max-sm:w-full">
       {!hideTitle && <h4 className="t-h2">{title}</h4>}
 
       {horizontal ? (
-        <div className="overflow-x-auto pb-2">
-          <div className="flex gap-4">
+        <div className="overflow-visible pb-2 md:overflow-x-auto">
+          <div className="flex gap-4  max-md:flex max-md:flex-col">
             {artworks.map((artwork) => (
-              <div key={artwork.id} className="min-w-[calc(50%-0.5rem)] shrink-0 basis-[calc(50%-0.5rem)]">
+              <div key={artwork.id} className="w-full md:shrink-0 md:basis-[calc(50%-0.5rem)]">
                 <Productcard artwork={artwork} pinDetailsToBottom />
               </div>
             ))}
           </div>
         </div>
       ) : (
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 max-sm:justify-center">
           {artworks.map((artwork) => (
             <Productcard key={artwork.id} artwork={artwork} />
           ))}

@@ -53,24 +53,24 @@ const ProductInfo = ({ id, artistName = "" }) => {
 
   return (
     <section className="mb-12 mt-12">
-      <div className="flex gap-8">
-        <div>
+      <div className="flex gap-8 flex-col md:flex-row">
+        <div className="w-full md:flex-1">
           <img src={product.thumbnail_url} alt={product.name} className="w-full object-cover" />
           {galleryImages.length > 0 && (
-            <div className="mt-4 flex justify-between">
+            <div className="mt-4 grid grid-cols-3 gap-4">
               {galleryImages.map((imageUrl, index) => (
-                <img key={imageUrl} src={imageUrl} alt={`${product.name} billede ${index + 2}`} className="h-42 w-42 object-cover" />
+                <img key={imageUrl} src={imageUrl} alt={`${product.name} billede ${index + 2}`} className="h-42 w-42 aspect-square w-full object-cover" />
               ))}
             </div>
           )}
         </div>
 
-        <div>
+        <div className="w-full md:flex-1">
           <div className="bg-(--primary-blue) h-3 w-36 mb-6 mt-6"></div>
           <p className="t-p"> {displayArtistName}</p>
-          <h2 className="mb-6 mt-10 uppercase t-h2">{product.name}</h2>
-          <p className="mb-2 mt-12 t-h3">Pris: {product.price} kr.</p>
-          <p className="mb-4 mt-12 t-h4">Mål: {product.dimensions}</p>
+          <h2 className="mb-6 mt-10 max-sm:mt-4 max-sm:mb-0 uppercase t-h2">{product.name}</h2>
+          <p className="mb-2 mt-12 max-sm:mt-4 max-sm:mb-0 t-h3">Pris: {product.price} kr.</p>
+          <p className="mb-4 mt-12 max-sm:mt-4 max-sm:mb-0 t-h4">Mål: {product.dimensions}</p>
           <AddToCartProduct id={product?.id} title={product?.name} price={product?.price} thumbnail={product?.thumbnail_url} />
           <p className="mb-4 leading-8">{product.description}</p>
         </div>

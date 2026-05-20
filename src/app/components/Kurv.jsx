@@ -19,8 +19,8 @@ const Kurv = ({ isPage = false }) => {
       {favorite.length === 0 ? (
         <p>Din kurv er tom.</p>
       ) : (
-        <div className={`flex flex-col ${isPage ? "flex-row " : ""} justify-between`}>
-          <div className={`flex flex-col ${isPage ? "w-2/3" : ""}`}>
+        <div className={`flex flex-col ${isPage ? "flex-row max-sm:flex-col " : ""} justify-between`}>
+          <div className={`flex flex-col ${isPage ? "w-2/3 max-sm:w-full" : ""}`}>
             {favorite.map((item) => (
               <div key={item.id} className={`flex items-center justify-between border-b border-black/10 pb-2 ${isPage ? "w-" : ""}`}>
                 <div className="flex items-center gap-3">
@@ -36,22 +36,23 @@ const Kurv = ({ isPage = false }) => {
                 </button>
               </div>
             ))}
+            <p className={`${isPage ? "hidden" : "place-self-end mt-4 border-b-2"}`}>{totalPrice} kr.</p>
           </div>
-          <div className={`flex flex-col ${isPage ? "w-1/3 pl-16" : ""}`}>
+          <div className={`flex flex-col ${isPage ? "w-1/3 pl-16 max-sm:w-full max-sm:pl-0 max-sm:pt-8" : ""}`}>
             <div className={`flex items-center ${isPage ? " mb-2 border-t-1 t-p justify-between pt-2" : "hidden"}`}>
               <p>Tilføj rabatkode</p>
-              <MdOutlineKeyboardArrowDown color="grey"/>
+              <MdOutlineKeyboardArrowDown color="grey" />
             </div>
             <div className={`flex items-center ${isPage ? " mb-2 border-t-1 t-p justify-between pt-2" : "hidden"}`}>
               <p>Fragt</p>
-              <MdOutlineKeyboardArrowDown color="grey"/>
+              <MdOutlineKeyboardArrowDown color="grey" />
             </div>
             <div className={`flex items-center ${isPage ? "border-b-1 pb-2 border-t-1" : "hidden"} justify-between pt-2 t-p`}>
               <p>Total</p>
               <p>{totalPrice} kr.</p>
             </div>
 
-            <Link href="/" className={`${isPage ? "--border-width-sm flex place-self-end text-center w-42 mt-8 inline-block  bg-[var(--secondary-blue)] px-6 py-3 t-s uppercase text-[var(--primary-color)] transition-colors duration-300 ease-out hover:scale-105 transition-transform" : "hidden"}`}>
+            <Link href="/" className={`${isPage ? "--border-width-sm flex place-self-end max-sm:place-self-start text-center w-42 mt-8 inline-block  bg-[var(--secondary-blue)] px-6 py-3 t-s uppercase text-[var(--primary-color)] transition-colors duration-300 ease-out hover:scale-105 transition-transform" : "hidden"}`}>
               Gå til kassen
             </Link>
 

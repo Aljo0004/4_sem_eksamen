@@ -6,7 +6,7 @@
   width: 100%;
   max-width: 1440px;
   margin-inline: auto;
-
+overflow-x: hidden;
   padding-inline: 20px;
 }
 
@@ -169,7 +169,11 @@
   .t-small {
     font-size: var(--small-m);
   }
+.t-manchet {
+    font-size: var(--p-m);
+  }
 
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -181,6 +185,7 @@
 
 body {
   background: var(--primary-color);
+  overflow-x: hidden;
 }
 
 /* Scoped scrollbar styling for the horizontal event card rail */
