@@ -25,9 +25,10 @@ const AddToCart = ({ id, title, price, thumbnail }) => {
         }
         toggleFavorite(product);
       }}
-      className="text-(--primary-blue) cursor-pointer bg-white hover:scale-110 hover:duration-300 hover:bg-(--primary-blue) hover:text-white ease-in-out transition-transform"
+      className="text-(--primary-blue) cursor-pointer bg-white md:hover:scale-110 md:hover:duration-300 md:hover:bg-(--primary-blue) md:hover:text-white ease-in-out transition-transform"
     >
-      {isInCart ? <FiMinus size={60} /> : <FiPlus size={60} />}
+      <span className="hidden max-sm:inline-block mt-4 t-small text-sm uppercase text-(--secondary-blue) border-b-2 border-(--secondary-blue) ">{isInCart ? "Fjern fra kurv" : "Læg i kurv"}</span>
+      <span className="hidden md:block">{isInCart ? <FiMinus size={60} /> : <FiPlus size={60} />}</span>
     </button>
   );
 };

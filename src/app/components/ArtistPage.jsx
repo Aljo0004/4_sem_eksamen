@@ -50,16 +50,16 @@ const ArtistPage = ({ id }) => {
   if (!artists) return <p>Intet kunstner fundet.</p>;
 
   return (
-    <section className="mb-12 gap-4 mt-12 flex">
+    <section className="mb-12 gap-4 mt-12 flex max-sm:flex-col">
       <div className="w-full pb-4 pr-4">
         <img src={artists.image_url} alt={artists.name} className="w-full object-cover" />
       </div>
 
-      <div className="w-full">
+      <div className="w-full max-sm:flex max-sm:flex-col">
         <div className="bg-(--primary-blue) h-2 w-28 mt-4 mb-4"></div>
         <p className="pb-4 t-p">Kunstner</p>
         <h1 className="mb-6 t-h2">{artists.name}</h1>
-        <div className="flex gap-12 pb-6">
+        <div className="flex gap-12 pb-6 max-sm:pt-4 max-sm:order-last">
           <FaTiktok size={40} className="cursor-pointer hover:scale-110 transition-transform" />
           <FaInstagram size={40} className="cursor-pointer hover:scale-110 transition-transform" />
         </div>
