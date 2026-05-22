@@ -18,7 +18,7 @@ export default function Home() {
         <Location />
         <ProductSection category="keramik" title="Håndplukkede produkter" limit={4} />
         <LearnMore />
-        <InfoCard />
+        <InfoCard title="Hvem er KÆNTT" subtitle="Om KÆNTT" description="Lær historien bag galleriet, vores mission og de kunstnere vi samarbejder med." imageUrl="/Images/InfoCard_Img.jpg" link="#" />
       </main>
       <Footer />
     </>
