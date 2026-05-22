@@ -1,6 +1,6 @@
 const Kvalitet = () => {
   return (
-    <div className=" pt-10">
+    <div className=" pt-10 pb-10">
       <div className="flex flex-col lg:flex-row lg:justify-between items-start">
         {/* Text column: stays above image on mobile, left on desktop */}
         <div className="order-2 w-full lg:w-480px lg:order-1 pb-10">

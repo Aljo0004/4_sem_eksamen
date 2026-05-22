@@ -56,7 +56,7 @@ const ArtistPage = ({ id }) => {
       </div>
 
       <div className="w-full max-sm:flex max-sm:flex-col">
-        <div className="bg-(--primary-blue) h-2 w-28 mt-4 mb-4"></div>
+        <div className="bg-(--primary-blue) h-2 w-28 max-sm:mt-4 mb-4"></div>
         <p className="pb-4 t-p">Kunstner</p>
         <h1 className="mb-6 t-h2">{artists.name}</h1>
         <div className="flex gap-12 pb-6 max-sm:pt-4 max-sm:order-last">

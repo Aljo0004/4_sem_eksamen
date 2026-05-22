@@ -59,14 +59,14 @@ const ProductInfo = ({ id, artistName = "" }) => {
           {galleryImages.length > 0 && (
             <div className="mt-4 grid grid-cols-3 gap-4">
               {galleryImages.map((imageUrl, index) => (
-                <img key={imageUrl} src={imageUrl} alt={`${product.name} billede ${index + 2}`} className="h-42 w-42 aspect-square w-full object-cover" />
+                <img key={imageUrl} src={imageUrl} alt={`${product.name} billede ${index + 2}`} className="aspect-square w-full object-cover" />
               ))}
             </div>
           )}
         </div>
 
         <div className="w-full md:flex-1">
-          <div className="bg-(--primary-blue) h-3 w-36 mb-6 mt-6"></div>
+          <div className="bg-(--primary-blue) h-3 w-36 mb-6 max-sm:mt-4"></div>
           <p className="t-p"> {displayArtistName}</p>
           <h2 className="mb-6 mt-10 max-sm:mt-4 max-sm:mb-0 uppercase t-h2">{product.name}</h2>
           <p className="mb-2 mt-12 max-sm:mt-4 max-sm:mb-0 t-h3">Pris: {product.price} kr.</p>

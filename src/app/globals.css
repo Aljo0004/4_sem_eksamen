@@ -188,7 +188,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Scoped scrollbar styling for the horizontal event card rail */
+
 .event-scrollbar {
   scrollbar-color: var(--primary-blue) var(--primary-color);
 }

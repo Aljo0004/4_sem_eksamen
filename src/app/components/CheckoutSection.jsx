@@ -2,7 +2,7 @@ import Kurv from "./Kurv";
 
 const CheckoutSection = () => {
   return (
-    <section className="page">
+    <section>
       <Kurv isPage />
     </section>
   );

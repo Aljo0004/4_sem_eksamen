@@ -5,7 +5,7 @@ const EventCard = () => {
     <article className="mb-12 mt-12">
       <h1 className="mb-4 t-h2">Se vores events</h1>
       <div className="event-scrollbar overflow-x-auto">
-        <div className="grid mb-8 min-w-full grid-flow-col auto-cols-[calc((100%-3rem)/4)] gap-4 bg-white max-sm:grid-cols-2 max-sm:grid-rows-3">
+        <div className="grid mb-8 min-w-full grid-flow-col auto-cols-[calc((100%-3rem)/4.2)] gap-4 bg-white max-sm:grid-cols-2 max-sm:grid-rows-3">
           <Link href="/events" className="block group w-full max-sm:flex max-sm:flex-col max-sm:justify-between">
             <div className="w-full overflow-hidden bg-white">
               <div className="aspect-square w-full">
