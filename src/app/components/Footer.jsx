@@ -79,13 +79,13 @@ const Footer = () => {
       <div className="w-full mt-6 flex flex-col items-center">
         <img src="/Images/logo.svg" alt="kaentt logo" className="h-20 object-contain mb-3" />
         <nav aria-label="Sociale medier" className="flex gap-6 items-center text-2xl mt-2">
-          <a href="#" aria-label="Facebook" className="hover:opacity-80">
+          <a href="#" aria-label="Facebook" className="hover:scale-120 hover:duration-300 ease-in-out transition-transform">
             <FaFacebook />
           </a>
-          <a href="#" aria-label="Instagram" className="hover:opacity-80">
+          <a href="#" aria-label="Instagram" className="hover:scale-120 hover:duration-300 ease-in-out transition-transform">
             <FaInstagram />
           </a>
-          <a href="#" aria-label="TikTok" className="hover:opacity-80">
+          <a href="#" aria-label="TikTok" className="hover:scale-120 hover:duration-300 ease-in-out transition-transform">
             <FaTiktok />
           </a>
         </nav>

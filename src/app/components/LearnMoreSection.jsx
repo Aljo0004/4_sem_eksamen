@@ -25,13 +25,13 @@ const LearnMoreSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col pt-20 lg:flex-row items-start gap-8">
+      <div className="flex flex-col pt-20 pb-10 lg:flex-row lg:flex lg:justify-between items-start gap-8">
         {/* Text column: stays above image on mobile, left on desktop */}
         <div className="order-2 w-full lg:w-480px lg:order-2">
-          <div className="">
+          <div className="lg:place-self-end lg:w-3/4 pl-2">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-5 lg:mt-0"></div>
             <h2 className="t-h2 pb-5">Hvad er vores vision?</h2>
-            <p className="t-p lg:pr-45">
+            <p className="t-p ">
               KÆNTT er skabt med en vision om at bringe unika kunst tættere på en ny generation af kunstkøbere i København. Som et high-end galleri og et nyt projekt fra Kræss på Nørrebro, er ambitionen at skabe et kurateret univers, hvor kvalitet, æstetik og personlighed går hånd i hånd.<br></br>
               <br></br> Hos KÆNTT handler det ikke kun om at købe kunst, men om at finde værker, der kan leve med dig og være med til at definere dit rum. Galleriet præsenterer unika værker i form af plakater og keramik, nøje udvalgt fra både upcoming og etablerede kunstnere.<br></br>
               <br></br> Fælles for dem er en stærk visuel identitet og en evne til at skabe noget, der føles personligt og vedkommende. Visionen er at gøre kunst til en naturlig del af hverdagen – ikke som noget utilgængeligt, men som en integreret del af den måde, vi indretter og udtrykker os på.

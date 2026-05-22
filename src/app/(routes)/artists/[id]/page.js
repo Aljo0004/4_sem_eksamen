@@ -12,7 +12,7 @@ export default async function Home({ params }) {
       <Nav />
       <main className="page">
         <ArtistPage id={id} />
-        <ProductSection artistId={id} limit={8} title="Kunstnerens produkter" />
+        <ProductSection artistId={id} limit={8} title="Kunstnerens værker" />
         <Footer />
       </main>
     </>

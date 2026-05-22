@@ -52,13 +52,13 @@ const ProductSection = ({ category = "glas", title = "Glasvaerker", limit = 20, 
 
   return (
     <div className="max-sm:w-full">
-      {!hideTitle && <h4 className="t-h2">{title}</h4>}
+      {!hideTitle && <h4 className={horizontal ? "t-h2" : "t-h2 pb-4"}>{title}</h4>}
 
       {horizontal ? (
         <div className="overflow-visible pb-2 md:overflow-x-auto">
           <div className="flex gap-4  max-md:flex max-md:flex-col">
             {artworks.map((artwork) => (
-              <div key={artwork.id} className="w-full md:shrink-0 md:basis-[calc(50%-0.5rem)]">
+              <div key={artwork.id} className="w-full md:shrink-0 md:basis-[calc((100%-1rem)/2.2)]">
                 <Productcard artwork={artwork} pinDetailsToBottom />
               </div>
             ))}
