@@ -3,7 +3,7 @@ const LearnMore = () => {
     <section className="learn-more mt-5">
       <div className="card-body grid md:grid-cols-3 gap-6">
         <div className="order-2 lg:order-1 md:col-span-2">
-          <img src="/images/Learn-More_img.jpg" alt="Learn more" className="w-full object-cover" />
+          <img src="/Images/Learn-More_img.jpg" alt="Learn more" className="w-full object-cover" />
         </div>
         <div className="order-1 md:order-2">
           <div className="mb-3">

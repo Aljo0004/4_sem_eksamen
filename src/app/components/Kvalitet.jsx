@@ -16,7 +16,7 @@ const Kvalitet = () => {
         </div>
 
         <div className="w-full lg:w-1/2 lg:order-2 lg:flex">
-          <img src="/images/Learn-More-kvalitet_img.jpg" alt="Learn more" className="" />
+          <img src="/Images/Learn-More-kvalitet_img.jpg" alt="Learn more" className="" />
         </div>
       </div>
     </div>

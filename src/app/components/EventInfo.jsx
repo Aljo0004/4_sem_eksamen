@@ -5,7 +5,7 @@ const EventInfo = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {/* Card 1 */}
         <div className="overflow-hidden pb-5">
-          <img src="/images/EventInfo-reception_img.jpg" alt="Event" className="w-full h-48 object-cover" />
+          <img src="/Images/EventInfo-reception_img.jpg" alt="Event" className="w-full h-48 object-cover" />
           <div className="pt-4">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
             <h3 className="t-card mb-2">Indvielsesreception</h3>
@@ -18,7 +18,7 @@ const EventInfo = () => {
 
         {/* Card 2 */}
         <div className="overflow-hidden pb-5">
-          <img src="/images/EventInfo_mod-kunstnerne_img.jpg" alt="Event" className="w-full h-48 object-cover" />
+          <img src="/Images/EventInfo_mod-kunstnerne_img.jpg" alt="Event" className="w-full h-48 object-cover" />
           <div className="pt-4">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
             <h3 className="t-card mb-2">Mød kunstnerne</h3>
@@ -31,7 +31,7 @@ const EventInfo = () => {
 
         {/* Card 3 */}
         <div className="overflow-hidden pb-5">
-          <img src="/images/EventInfo-Fernisering_img.jpg" alt="Event" className="w-full h-48 object-cover" />
+          <img src="/Images/EventInfo-Fernisering_img.jpg" alt="Event" className="w-full h-48 object-cover" />
           <div className="pt-4">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
             <h3 className="t-card mb-2">Privat fernisering</h3>
@@ -43,7 +43,7 @@ const EventInfo = () => {
         </div>
         {/* Card 4 */}
         <div className="overflow-hidden pb-5">
-          <img src="/images/EventInfo-Vin_img.jpg" alt="Event" className="w-full h-48 object-cover" />
+          <img src="/Images/EventInfo-Vin_img.jpg" alt="Event" className="w-full h-48 object-cover" />
           <div className="pt-4">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
             <h3 className="t-card mb-2">Kunst og vin i harmoni</h3>
@@ -55,7 +55,7 @@ const EventInfo = () => {
         </div>
         {/* Card 5 */}
         <div className="overflow-hidden pb-5">
-          <img src="/images/EventInfo-Rundvisning_img.jpg" alt="Event" className="w-full h-48 object-cover" />
+          <img src="/Images/EventInfo-Rundvisning_img.jpg" alt="Event" className="w-full h-48 object-cover" />
           <div className="pt-4">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
             <h3 className="t-card mb-2">Kureret rundvisning</h3>
@@ -67,7 +67,7 @@ const EventInfo = () => {
         </div>
         {/* Card 6 */}
         <div className="overflow-hidden pb-5">
-          <img src="/images/EventInfo-Lukketid-img.jpg" alt="Event" className="w-full h-48 object-cover" />
+          <img src="/Images/EventInfo-Lukketid-img.jpg" alt="Event" className="w-full h-48 object-cover" />
           <div className="pt-4">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
             <h3 className="t-card mb-2">Efter lukketid på KÆNTT</h3>
@@ -78,8 +78,6 @@ const EventInfo = () => {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 };

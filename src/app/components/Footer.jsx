@@ -77,7 +77,7 @@ const Footer = () => {
       </div>
 
       <div className="w-full mt-6 flex flex-col items-center">
-        <img src="/Images/logo.svg" alt="kaentt logo" className="h-20 object-contain mb-3" />
+        <img src="/Images/Logo.svg" alt="kaentt logo" className="h-20 object-contain mb-3" />
         <nav aria-label="Sociale medier" className="flex gap-6 items-center text-2xl mt-2">
           <a href="https://www.facebook.com/kraess.store" aria-label="Facebook" className="hover:scale-120 hover:duration-300 ease-in-out transition-transform">
             <FaFacebook />
