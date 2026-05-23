@@ -21,7 +21,7 @@ const LearnMoreSection = () => {
         </div>
 
         <div className="w-full lg:w-1/2 lg:order-2 lg:flex">
-          <img src="/images/LearnMore-hvem-er_img.jpg" alt="Learn more" className="" />
+          <img src="/Images/LearnMore-hvem-er_img.jpg" alt="Learn more" className="" />
         </div>
       </div>
 
@@ -41,7 +41,7 @@ const LearnMoreSection = () => {
 
         {/* Image column: stays below text on mobile, moves to right on desktop */}
         <div className="w-full lg:w-1/2 lg:order-1">
-          <img src="/images/Vision_img.jpg" alt="Learn more" className="w-full h-auto object-cover" />
+          <img src="/Images/Vision_img.jpg" alt="Learn more" className="w-full h-auto object-cover" />
         </div>
       </div>
     </div>
