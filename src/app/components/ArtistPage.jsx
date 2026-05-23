@@ -15,7 +15,7 @@ const ArtistPage = ({ id }) => {
   useEffect(() => {
     const fetchArtist = async () => {
       try {
-        const response = await fetch(`${url}artists?select=id,name,description,image_url&id=eq.${id}&limit=1`, {
+        const response = await fetch(`${url}artists?select=id,name,description,image_url,igsome_url,tiktoksome_url&id=eq.${id}&limit=1`, {
           headers: {
             apikey: key,
             Authorization: `Bearer ${key}`,
@@ -49,6 +49,9 @@ const ArtistPage = ({ id }) => {
   if (error) return <p>Fejl: {error}</p>;
   if (!artists) return <p>Intet kunstner fundet.</p>;
 
+  const hasTikTok = Boolean(artists.tiktoksome_url);
+  const hasInstagram = Boolean(artists.igsome_url);
+
   return (
     <section className="mb-12 gap-4 mt-12 flex max-sm:flex-col">
       <div className="w-full pb-4 pr-4">
@@ -59,9 +62,13 @@ const ArtistPage = ({ id }) => {
         <div className="bg-(--primary-blue) h-2 w-28 max-sm:mt-4 mb-4"></div>
         <p className="pb-4 t-p">Kunstner</p>
         <h1 className="mb-6 t-h2">{artists.name}</h1>
-        <div className="flex gap-12 pb-6 max-sm:pt-4 max-sm:order-last">
-          <FaTiktok size={40} className="cursor-pointer hover:scale-110 transition-transform" />
-          <FaInstagram size={40} className="cursor-pointer hover:scale-110 transition-transform" />
+        <div className={`flex gap-12 pb-6 max-sm:pt-4 max-sm:order-last ${hasTikTok || hasInstagram ? "" : "hidden"}`}>
+          <a href={hasTikTok ? artists.tiktoksome_url : "#"} target="_blank" className={hasTikTok ? "" : "hidden"}>
+            <FaTiktok size={40} className="cursor-pointer hover:scale-110 transition-transform" />
+          </a>
+          <a href={hasInstagram ? artists.igsome_url : "#"} target="_blank" className={hasInstagram ? "" : "hidden"}>
+            <FaInstagram size={40} className="cursor-pointer hover:scale-110 transition-transform" />
+          </a>
         </div>
         <div>
           <p className="mb-4">{artists.description}</p>

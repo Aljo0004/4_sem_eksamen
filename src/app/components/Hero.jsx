@@ -22,9 +22,15 @@ const Hero = () => {
             <h6 className="tracking-wider text-right font-light t-p">
               Find os på <br /> sociale medier:
               <div className="flex space-x-4 place-content-end gap-3.5 mt-4">
-                <FaFacebook size={25} className="" />
-                <FaInstagram size={25} className="" />
-                <FaTiktok size={25} className="" />
+                <a href="https://www.facebook.com/kraess.store" target="_blank" className="ease-out hover:scale-120 transition-transform">
+                  <FaFacebook size={25} className="" />
+                </a>
+                <a href="https://www.instagram.com/kraess.store/" target="_blank" className="ease-out hover:scale-120 transition-transform">
+                  <FaInstagram size={25} className="" />
+                </a>
+                <a href="https://www.tiktok.com/@kraess.store" target="_blank" className="ease-out hover:scale-120 transition-transform">
+                  <FaTiktok size={25} className="" />
+                </a>
               </div>
             </h6>
             <div className="bg-(--primary-blue) h-3 w-36 ml-24 mt-6"></div>
