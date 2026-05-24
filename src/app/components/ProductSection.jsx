@@ -52,7 +52,7 @@ const ProductSection = ({ category = "glas", title = "Glasvaerker", limit = 20, 
 
   return (
     <div className="max-sm:w-full">
-      {!hideTitle && <h4 className={horizontal ? "t-h2" : "t-h2 pb-4"}>{title}</h4>}
+      {!hideTitle && <h2 className={horizontal ? "t-h2" : "t-h2 pb-4"}>{title}</h2>}
 
       {horizontal ? (
         <div className="overflow-visible pb-2 md:overflow-x-auto">
