@@ -63,10 +63,10 @@ const ArtistPage = ({ id }) => {
         <p className="pb-4 t-p">Kunstner</p>
         <h1 className="mb-6 t-h2">{artists.name}</h1>
         <div className={`flex gap-12 pb-6 max-sm:pt-4 max-sm:order-last ${hasTikTok || hasInstagram ? "" : "hidden"}`}>
-          <a href={hasTikTok ? artists.tiktoksome_url : "#"} target="_blank" className={hasTikTok ? "" : "hidden"}>
+          <a href={hasTikTok ? artists.tiktoksome_url : "#"} target="_blank" rel="noopener noreferrer" aria-label="TikTok profil" className={hasTikTok ? "" : "hidden"}>
             <FaTiktok size={40} className="cursor-pointer hover:scale-110 transition-transform" />
           </a>
-          <a href={hasInstagram ? artists.igsome_url : "#"} target="_blank" className={hasInstagram ? "" : "hidden"}>
+          <a href={hasInstagram ? artists.igsome_url : "#"} target="_blank" rel="noopener noreferrer" aria-label="Instagram profil" className={hasInstagram ? "" : "hidden"}>
             <FaInstagram size={40} className="cursor-pointer hover:scale-110 transition-transform" />
           </a>
         </div>

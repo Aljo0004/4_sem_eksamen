@@ -69,8 +69,8 @@ const ProductInfo = ({ id, artistName = "" }) => {
           <div className="bg-(--primary-blue) h-3 w-36 mb-6 max-sm:mt-4"></div>
           <p className="t-p"> {displayArtistName}</p>
           <h2 className="mb-6 mt-10 max-sm:mt-4 max-sm:mb-0 uppercase t-h2">{product.name}</h2>
-          <p className="mb-2 mt-12 max-sm:mt-4 max-sm:mb-0 t-h3">Pris: {product.price} kr.</p>
-          <p className="mb-4 mt-12 max-sm:mt-4 max-sm:mb-0 t-h4">Mål: {product.dimensions}</p>
+          <h3 className="mb-2 mt-12 max-sm:mt-4 max-sm:mb-0 t-h3">Pris: {product.price} kr.</h3>
+          <h4 className="mb-4 mt-12 max-sm:mt-4 max-sm:mb-0 t-h4">Mål: {product.dimensions}</h4>
           <AddToCartProduct id={product?.id} title={product?.name} price={product?.price} thumbnail={product?.thumbnail_url} />
           <p className="mb-4 leading-8">{product.description}</p>
         </div>
