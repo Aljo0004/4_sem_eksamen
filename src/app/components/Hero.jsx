@@ -14,7 +14,7 @@ const Hero = () => {
           <p className="t-manchet max-sm:mt-4">
             Opdag unika værker fra nøje udvalgte kunstnere - <br /> og oplev dem helt tæt på i galleriet
           </p>
-          <Link href="/productlist" className="--border-width-sm max-sm:mt-6 mt-8 inline-block  bg-[var(--secondary-blue)] px-6 py-3 text-sm uppercase text-[var(--primary-color)] transition-colors duration-300 ease-out hover:scale-105 transition-transform">
+          <Link href="/productlist" className=" max-sm:mt-6 mt-8 inline-block border-2 border-[var(--secondary-blue)] bg-white px-6 py-3 t-card bold uppercase text-black transition-colors duration-300 ease-out hover:border-white hover:bg-[var(--secondary-blue)] hover:text-white transition-transform">
             Udforsk Værker
           </Link>
         </div>

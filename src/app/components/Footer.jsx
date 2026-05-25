@@ -69,9 +69,9 @@ const Footer = () => {
 
           <div className="mt-3 flex flex-col gap-2">
             <p className="t-p">Fuldt navn</p>
-            <input type="text" placeholder="Udfyld her" className=" bg-white input input-bordered w-full t-p pt-1 pb-1" />
+            <input type="text" placeholder="Udfyld her" className=" bg-white input input-bordered w-full pl-2 t-p pt-1 pb-1" />
             <p className="t-p">E-Mail</p>
-            <input type="email" placeholder="Udfyld her" className="bg-white input input-bordered w-full t-p pt-1 pb-1" />
+            <input type="email" placeholder="Udfyld her" className="bg-white input input-bordered w-full pl-2 t-p pt-1 pb-1" />
           </div>
         </nav>
       </div>

@@ -52,8 +52,8 @@ const ArtistSection = ({ name = "glas", limit = 20 }) => {
       <h2 className="mb-6 t-h2 pt-6">{name}</h2>
       <div className="flex flex-col gap-4">
         {artworks.map((artists) => (
-          <section key={artists.id} className="mb-12 flex gap-8 max-sm:gap-0 max-sm:flex-col items-start  max-sm:border-t-2 pt-6 border-black">
-            <ArtistInfo artists={artists} />
+          <section key={artists.id} className="mb-12 flex gap-8 max-sm:gap-0 max-sm:flex-col items-start  border-t-2 pt-6 border-gray-500">
+            <ArtistInfo artists={artists} className="" />
             <h3 className="t-h3 min-md:hidden border-b-2 inline-block pb-1">Kunstnerens værker</h3>
             <ProductSection artistId={artists.id} limit={4} title="" horizontal />
           </section>
