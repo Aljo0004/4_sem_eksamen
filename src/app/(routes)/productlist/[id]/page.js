@@ -57,8 +57,8 @@ export default async function Home({ params, searchParams }) {
       <Nav />
       <main className="page">
         <ProductInfo id={id} artistName={artistName} />
-        <InfoCard title={`Hvem er ${infoCardArtistName}?`} subtitle="Kunstnere" description={infoCardArtistDescription} imageUrl={infoCardArtistImage} link={artistId ? `/artists/${artistId}` : "/artists"} />
         <ProductSection category={relatedCategory} title="Relaterede værker" limit={4} />
+        <InfoCard title={`Hvem er ${infoCardArtistName}?`} subtitle="Kunstnere" description={infoCardArtistDescription} imageUrl={infoCardArtistImage} link={artistId ? `/artists/${artistId}` : "/artists"} />
       </main>
       <Footer />
     </>

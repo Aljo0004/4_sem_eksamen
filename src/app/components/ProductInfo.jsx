@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import AddToCartProduct from "./AddToCartProduct";
 
@@ -49,7 +50,6 @@ const ProductInfo = ({ id, artistName = "" }) => {
 
   const displayArtistName = artistName || product?.artists?.name || `ID: ${product.artist_id}`;
   const galleryImages = [product?.picture_2, product?.picture_3, product?.picture_4].filter(Boolean);
-  const artistId = product?.artist_id;
 
   return (
     <section className="mb-12 mt-12">
@@ -67,9 +67,7 @@ const ProductInfo = ({ id, artistName = "" }) => {
 
         <div className="w-full md:flex-1">
           <div className="bg-(--primary-blue) h-3 w-36 mb-6 max-sm:mt-4"></div>
-          <a href={artistId ? `/artists/${artistId}` : "/artists"} className="block">
-            <p className="t-p hover:underline"> {displayArtistName}</p>
-          </a>
+          <p className="t-p"> {displayArtistName}</p>
           <h2 className="mb-6 mt-10 max-sm:mt-4 max-sm:mb-0 uppercase t-h2">{product.name}</h2>
           <h3 className="mb-2 mt-12 max-sm:mt-4 max-sm:mb-0 t-h3">Pris: {product.price} kr.</h3>
           <h4 className="mb-4 mt-12 max-sm:mt-4 max-sm:mb-0 t-h4">Mål: {product.dimensions}</h4>

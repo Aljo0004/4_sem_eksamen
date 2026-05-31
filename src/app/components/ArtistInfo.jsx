@@ -10,7 +10,6 @@ const ArtistInfo = ({ artists }) => {
           <div className="">
             <div className="bg-(--primary-blue) max-w-sm h-2 w-28 mt-4 mb-4"></div>
             <div className="flex flex-col justify-between">
-              <p className="t-p">Kunstner</p>
               <h2 className="t-h2">{artists?.name}</h2>
               {/* <p className="t-p max-w-md">{artists?.description?.substring(0, 100)}...</p> */}
             </div>
