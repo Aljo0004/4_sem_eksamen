@@ -1,82 +1,55 @@
-const EventInfo = () => {
+import Link from "next/link";
+import Image from "next/image";
+
+const url = "https://nrmpgakohbffwagdkvpz.supabase.co/rest/v1/";
+const key = "sb_publishable_5CdrCx6J36n2qJrs6sBwiA_bvTRTQ4a";
+
+const EventInfo = async () => {
+  let events = [];
+  let error = "";
+
+  try {
+    const response = await fetch(`${url}events?select=id,eventname,description,events_url&order=id.asc&limit=6`, {
+      headers: {
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+      },
+      next: { revalidate: 60 },
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data?.message || "Kunne ikke hente events");
+    }
+
+    if (Array.isArray(data)) {
+      events = data;
+    } else {
+      error = "API returnerede ikke en liste";
+    }
+  } catch (err) {
+    error = err.message || "Ukendt fejl ved hentning af events";
+  }
+
+  if (error) return <p>Fejl: {error}</p>;
+
   return (
     <div>
       <h2 className="t-h2 mt-10">Kommende events</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        {/* Card 1 */}
-        <div className="overflow-hidden pb-5">
-          <img src="/Images/EventInfo-reception_img.jpg" alt="Event" className="w-full h-48 object-cover" />
-          <div className="pt-4">
-            <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
-            <h3 className="t-card mb-2">Indvielsesreception</h3>
-            <p className="t-p pb-2">En eksklusiv åbningsaften med udvalgte værker, bobler og en introduktion til KÆNTTs kunstneriske univers. Oplev galleriet i en stemningsfuld og kurateret setting.</p>
-            <a className="t-p text-(--secondary-blue) underline" href="">
-              Læs mere
-            </a>
-          </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="overflow-hidden pb-5">
-          <img src="/Images/EventInfo_mod-kunstnerne_img.jpg" alt="Event" className="w-full h-48 object-cover" />
-          <div className="pt-4">
-            <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
-            <h3 className="t-card mb-2">Mød kunstnerne</h3>
-            <p className="t-p pb-2">Mød kunstnerne bag værkerne og få indblik i processer, materialer og inspiration. En intim samtale, der bringer dig tættere på kunsten.</p>
-            <a className="t-p text-(--secondary-blue) underline" href="">
-              Læs mere
-            </a>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div className="overflow-hidden pb-5">
-          <img src="/Images/EventInfo-Fernisering_img.jpg" alt="Event" className="w-full h-48 object-cover" />
-          <div className="pt-4">
-            <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
-            <h3 className="t-card mb-2">Privat fernisering</h3>
-            <p className="t-p pb-2">En lukket visning i rolige omgivelser, hvor du kan opleve værkerne uden forstyrrelser.</p>
-            <a className="t-p text-(--secondary-blue) underline" href="">
-              Læs mere
-            </a>
-          </div>
-        </div>
-        {/* Card 4 */}
-        <div className="overflow-hidden pb-5">
-          <img src="/Images/EventInfo-Vin_img.jpg" alt="Event" className="w-full h-48 object-cover" />
-          <div className="pt-4">
-            <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
-            <h3 className="t-card mb-2">Kunst og vin i harmoni</h3>
-            <p className="t-p pb-2">En sanselig oplevelse, hvor kunst og vin går hånd i hånd. Udvalgte værker præsenteres sammen med nøje udvalgte vine.</p>
-            <a className="t-p text-(--secondary-blue) underline" href="">
-              Læs mere
-            </a>
-          </div>
-        </div>
-        {/* Card 5 */}
-        <div className="overflow-hidden pb-5">
-          <img src="/Images/EventInfo-Rundvisning_img.jpg" alt="Event" className="w-full h-48 object-cover" />
-          <div className="pt-4">
-            <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
-            <h3 className="t-card mb-2">Kureret rundvisning</h3>
-            <p className="t-p pb-2">En guidet rundvisning i galleriets aktuelle kollektion med fokus på fortælling, æstetik og kuratering.</p>
-            <a className="t-p text-(--secondary-blue) underline" href="">
-              Læs mere
-            </a>
-          </div>
-        </div>
-        {/* Card 6 */}
-        <div className="overflow-hidden pb-5">
-          <img src="/Images/EventInfo-Lukketid-img.jpg" alt="Event" className="w-full h-48 object-cover" />
-          <div className="pt-4">
-            <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
-            <h3 className="t-card mb-2">Efter lukketid på KÆNTT</h3>
-            <p className="t-p pb-2">En aften med kunst, musik og atmosfære. Galleriet åbner op efter lukketid og skaber en mere eksperimenterende og levende oplevelse.</p>
-            <a className="t-p text-(--secondary-blue) underline" href="">
-              Læs mere
-            </a>
-          </div>
-        </div>
+        {events.map((event) => (
+          <Link href={`/events/${event.id}`} key={event.id} className="group">
+            <div className="overflow-hidden pb-5">
+              <Image src={event.events_url} alt={event.eventname} className="w-full h-48 object-cover transition-transform duration-300 ease-out group-hover:scale-95" width={1920} height={1080} />
+              <div className="pt-4">
+                <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0 group-hover:w-full duration-300 ease-inOut"></div>
+                <h3 className="t-card mb-2">{event.eventname}</h3>
+                <p className="t-p pb-2">{event.description?.slice(0, 200)}...</p>
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
