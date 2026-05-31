@@ -1,10 +1,11 @@
+import Image from "next/image";
 const CampaignSection = () => {
   return (
     <div>
       <h2 className="t-h2">Tilbud</h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
         <div className="overflow-hidden pb-5">
-          <img src="/Images/Gulerod_img.jpg" alt="Event" className="w-full aspect-square object-cover" />
+          <Image src="/Images/Gulerod_img.jpg" alt="Event" className="w-full aspect-square object-cover" width={500} height={500} />
           <div className="pt-4">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
             <h3 className="t-card mb-2">KÆNTT-guleroden</h3>
@@ -16,7 +17,7 @@ const CampaignSection = () => {
         </div>
 
         <div className="overflow-hidden pb-5">
-          <img src="/Images/tote-bag_img.jpg" alt="Event" className="w-full aspect-square object-cover" />
+          <Image src="/Images/tote-bag_img.jpg" alt="Event" className="w-full aspect-square object-cover" width={500} height={500} />
           <div className="pt-4">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
             <h3 className="t-card mb-2">Limited Tote Drop</h3>
@@ -28,7 +29,7 @@ const CampaignSection = () => {
         </div>
 
         <div className="overflow-hidden pb-5">
-          <img src="/Images/Samlefordele_img.jpg" alt="Event" className="w-full aspect-square object-cover" />
+          <Image src="/Images/Samlefordele_img.jpg" alt="Event" className="w-full aspect-square object-cover" width={500} height={500} />
           <div className="pt-4">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
             <h3 className="t-card mb-2">Samlerfordel</h3>
@@ -40,7 +41,7 @@ const CampaignSection = () => {
         </div>
 
         <div className="overflow-hidden pb-5">
-          <img src="/Images/walknwine_img.jpg" alt="Event" className="w-full aspect-square object-cover" />
+          <Image src="/Images/walknwine_img.jpg" alt="Event" className="w-full aspect-square object-cover" width={500} height={500} />
           <div className="pt-4">
             <div className="bg-(--primary-blue) h-2 w-24 mb-2 mt-0"></div>
             <h3 className="t-card mb-2">Walk-In & Vin</h3>

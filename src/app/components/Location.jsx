@@ -1,10 +1,10 @@
-const Location = () => {
+const Location = ({ columnLayout = false }) => {
   return (
     <div className="card-body pt-10 pb-10">
-      <div className="flex flex-col md:flex-row items-start gap-6">
-        <img src="/Images/Location_img.jpg" alt="kort" className="w-full md:w-1/2 object-cover order-2 md:order-1" />
+      <div className={`flex ${columnLayout ? "max-sm:flex-col md:flex-col-reverse md:ml-auto" : "max-sm:flex-col md:flex-row"} items-start gap-6`}>
+        <img src="/Images/Location_img.jpg" alt="kort" className={`w-full ${columnLayout ? "md:w-full" : "md:w-1/2"} object-cover order-2 ${columnLayout ? "md:order-2" : "md:order-1"}`} />
 
-        <div className="w-full md:w-1/2 order-1 md:order-2">
+        <div className={`w-full ${columnLayout ? "md:w-full" : "md:w-1/2"} order-1 md:order-2`}>
           <div className="bg-(--primary-blue) h-2 w-26 mb-2"></div>
           <h2 className="t-h2">Kom ned i galleriet</h2>
           <div className="grid grid-cols-2  pt-5 pb-2">
